@@ -18,9 +18,10 @@
       <button type="submit" class="btn btn-primary">送信</button>
       -->
     </form>
-    <div v-for="element in elements" :key="element">
+    <div v-for="element in elements" :key="element" class="mt-3">
+      {{element.txt}}<br>
       <a :href="targetProtocol + '//' + targetDomein + '/' + element.href" target="_blank" rel="noopener noreferrer">
-        {{element.txt}}
+        {{targetProtocol}}//{{targetDomein}}/{{element.href}}
       </a>
     </div>
     <!-- 
