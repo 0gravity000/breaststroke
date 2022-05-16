@@ -1,5 +1,5 @@
 <template>
-  <div class="container-flued">
+  <div class="container-fluid">
     <NavbarMain />
     <div class="row">
       <div class="col-3">
