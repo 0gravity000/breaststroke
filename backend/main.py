@@ -26,10 +26,13 @@ def stroke_ahref():
   #logging.debug(res.content)
   soup = BeautifulSoup(res.content, "html.parser")
   #logging.debug(soup)
-  txt = soup.get_text()
+  #txt = soup.get_text()
   hrefs = []
+  #logging.debug(soup.find_all('a'))
   for link in soup.find_all('a'):
-      hrefs.append(link.get('href'))
+    logging.debug(link)
+    logging.debug(link.string)
+    hrefs.append({'href': link.get('href'), 'txt': link.string})
   #logging.debug(hrefs)
   return jsonify(hrefs)
 

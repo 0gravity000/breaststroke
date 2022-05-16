@@ -19,8 +19,8 @@
       -->
     </form>
     <div v-for="element in elements" :key="element">
-      <a :href="targetProtocol + '//' + targetDomein + '/' + element" target="_blank" rel="noopener noreferrer">
-        {{this.targetProtocol}}//{{this.targetDomein}}/{{element}}
+      <a :href="targetProtocol + '//' + targetDomein + '/' + element.href" target="_blank" rel="noopener noreferrer">
+        {{element.txt}}
       </a>
     </div>
     <!-- 
